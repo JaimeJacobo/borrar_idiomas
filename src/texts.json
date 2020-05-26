@@ -1,0 +1,10 @@
+{
+	"spanish": {
+    "saludo": "Hola! bienvenido a mi página web",
+    "text": "Haz click en un botón para cambiar de idioma"
+	},
+	"english": {
+    "saludo": "Hello! Welcome to my website",
+    "text": "Click on a botton tu change the language"
+	}
+}

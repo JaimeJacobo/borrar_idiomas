@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import MyContext from './context.js';
+import Saludo from './Saludo';
+import Botones from './Botones';
+import Text from './Text';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [ selectedLanguage, updateselectedLanguage ] = useState('spanish');
+
+	return (
+		<MyContext.Provider value={[ selectedLanguage, updateselectedLanguage ]}>
+			<div className="App">
+				<Botones />
+				<Saludo />
+				<Text />
+			</div>
+		</MyContext.Provider>
+	);
 }
 
 export default App;
